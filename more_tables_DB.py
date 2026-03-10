@@ -201,16 +201,16 @@ sales = pd.DataFrame(
 
 with pd.ExcelWriter("mining_dataset_powerbi.xlsx") as writer:
 
-    mines.to_excel(writer,"Mines",index=False)
-    employees.to_excel(writer,"Employees",index=False)
-    equipment.to_excel(writer,"Equipment",index=False)
-    blocks.to_excel(writer,"Blocks",index=False)
-    drillholes.to_excel(writer,"Drillholes",index=False)
-    production.to_excel(writer,"Production",index=False)
-    prices.to_excel(writer,"MetalPrices",index=False)
-    opex.to_excel(writer,"OPEX",index=False)
-    capex.to_excel(writer,"CAPEX",index=False)
-    stockpiles.to_excel(writer,"Stockpiles",index=False)
-    sales.to_excel(writer,"Sales",index=False)
+    mines.to_excel(writer, sheet_name="Mines", index=False)
+    employees.to_excel(writer, sheet_name="Employees", index=False)
+    equipment.to_excel(writer, sheet_name="Equipment", index=False)
+    blocks.to_excel(writer, sheet_name="Blocks", index=False)
+    drillholes.to_excel(writer, sheet_name="Drillholes", index=False)
+    production.to_excel(writer, sheet_name="Production", index=False)
+    prices.to_excel(writer, sheet_name="MetalPrices", index=False)
+    opex.to_excel(writer, sheet_name="OPEX", index=False)
+    capex.to_excel(writer, sheet_name="CAPEX", index=False)
+    stockpiles.to_excel(writer, sheet_name="Stockpiles", index=False)
+    sales.to_excel(writer, sheet_name="Sales", index=False)
 
 print("Dataset generated: mining_dataset_powerbi.xlsx")
