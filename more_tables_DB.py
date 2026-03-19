@@ -199,7 +199,7 @@ sales = pd.DataFrame(
 # EXPORT
 # -----------------------
 
-with pd.ExcelWriter("mining_dataset_powerbi.xlsx") as writer:
+with pd.ExcelWriter("mining_dataset.xlsx") as writer:
 
     mines.to_excel(writer, sheet_name="Mines", index=False)
     employees.to_excel(writer, sheet_name="Employees", index=False)
@@ -213,4 +213,4 @@ with pd.ExcelWriter("mining_dataset_powerbi.xlsx") as writer:
     stockpiles.to_excel(writer, sheet_name="Stockpiles", index=False)
     sales.to_excel(writer, sheet_name="Sales", index=False)
 
-print("Dataset generated: mining_dataset_powerbi.xlsx")
+print("Dataset generated: mining_dataset.xlsx")
